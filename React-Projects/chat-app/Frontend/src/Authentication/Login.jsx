@@ -4,11 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
+
 export default function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [show, setShow] = useState(false);
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
 
     const navigate = useNavigate();
 
@@ -20,7 +22,7 @@ export default function Login() {
         }
 
         try {
-            const loginApi = await axios.post("http://localhost:5000/api/login", {
+            const loginApi = await axios.post(`${backendUrl}/login`, {
                 email,
                 password
             });

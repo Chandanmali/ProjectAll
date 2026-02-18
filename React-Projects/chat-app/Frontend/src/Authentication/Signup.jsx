@@ -15,6 +15,7 @@ export default function Signup() {
     const [avatar, setAvatar] = useState(null);
     const [fileName, setFileName] = useState("No file chosen");
     const [loading, setLoading] = useState(false);
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
 
     const navigate = useNavigate();
 
@@ -44,7 +45,7 @@ export default function Signup() {
             formData.append("avatar", avatar);
         }
 
-        const response = await fetch("http://localhost:5000/api/signup", {
+        const response = await fetch(`${backendUrl}/signup`, {
             method: "POST",
             body: formData,
         });

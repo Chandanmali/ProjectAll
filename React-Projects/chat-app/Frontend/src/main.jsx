@@ -15,10 +15,6 @@ const appRouter = createBrowserRouter([
     element: <Login />
   },
   {
-    path: "/chat",
-    element: <Chat />
-  },
-  {
     path: "/auth/signup",
     element: <Signup />
   },
