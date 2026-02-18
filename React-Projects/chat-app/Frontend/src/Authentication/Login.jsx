@@ -22,7 +22,7 @@ export default function Login() {
         }
 
         try {
-            const loginApi = await axios.post(`${backendUrl}/login`, {
+            const loginApi = await axios.post(`${backendUrl}/api/login`, {
                 email,
                 password
             });
