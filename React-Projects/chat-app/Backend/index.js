@@ -124,7 +124,7 @@ app.post("/api/login", async (req, res) => {
       token: token,
     });
   } else {
-    return res.status(404).json({ err: "User not found" });
+    return res.status(401).json({ err: "User not found" });
   }
 });
 
