@@ -26,7 +26,7 @@ const io = new Server(server, {
 
 const ROOM = "group";
 
-app.use(cors());
+//app.use(cors());
 app.use(express.json());
 
 mongoose
