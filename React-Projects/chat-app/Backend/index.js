@@ -34,6 +34,10 @@ mongoose
   .then(() => console.log("MongoDB connected successfully"))
   .catch(() => console.log("DB connection failed"));
 
+  app.get("/health", (req, res) => {
+    res.status(200).send("OK");
+  });
+
 //websocket implementation
 //2.backend server made connection with frontend and when connection happen callback fuction fire
 
